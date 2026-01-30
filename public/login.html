@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificação - Portal SGT</title>
+    <link href="./Logo-Parana.png" rel="icon" type="image/png">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #matrixCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .login-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .login-box {
+            background: rgba(0, 4, 40, 0.9);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 8px;
+            border: 2px solid #00ffff;
+            box-shadow: 
+                0 0 25px rgba(0, 255, 255, 0.7),
+                0 0 50px rgba(0, 100, 255, 0.5),
+                inset 0 0 15px rgba(0, 255, 255, 0.3);
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(0, 255, 255, 0.1) 50%,
+                transparent 70%
+            );
+            animation: hackerScan 4s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes hackerScan {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .login-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-login {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header-login img {
+            height: 75px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #0011ff);
+        }
+
+        .header-login h2 {
+            font-size: 18px;
+            color: #00ffff;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 
+                0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 30px #0011ff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #00ffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #00ffff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid #00a2ff;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            outline: none;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+            cursor: text !important;
+        }
+
+        .form-group input:focus {
+            border-color: #00ffff;
+            box-shadow: 
+                0 0 15px rgba(0, 255, 255, 0.5),
+                inset 0 0 10px rgba(0, 255, 255, 0.2);
+            background: rgba(0, 30, 60, 0.9);
+        }
+
+        .form-group input::placeholder {
+            color: #0099cc;
+            opacity: 0.7;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #0011ff 0%, #00a2ff 100%);
+            color: #fff;
+            border: none;
+            padding: 16px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer !important;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            letter-spacing: 2px;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 5px #00ffff;
+            box-shadow: 
+                0 0 20px rgba(0, 100, 255, 0.7),
+                inset 0 0 10px rgba(0, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #00a2ff 0%, #0011ff 100%);
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.9),
+                inset 0 0 15px rgba(0, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-submit:disabled {
+            background: linear-gradient(135deg, #333 0%, #666 100%);
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .alert-danger {
+            background: rgba(255, 0, 50, 0.2);
+            color: #ff3366;
+            border: 1px solid #ff3366;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 25px;
+            display: none;
+            text-align: center;
+            text-shadow: 0 0 5px #ff3366;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 0 15px rgba(255, 0, 50, 0.3);
+        }
+
+        .login-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 11px;
+            color: #00a2ff;
+            background: rgba(0, 20, 40, 0.8);
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 5px #00a2ff;
+            border-top: 1px solid #00a2ff;
+            z-index: 1;
+            position: relative;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #00ffff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        @keyframes spin { 
+            to { 
+                transform: rotate(360deg); 
+            } 
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .header-login h2 {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="login-wrapper">
+        <div class="login-box">
+            <div class="login-content">
+                <div class="header-login">
+                    <img src="./Logo-Parana.png" alt="Logo Detran PR">
+                    <h2>SISTEMA DE CONTROLE - ACESSO RESTRITO</h2>
+                </div>
+
+                <div id="errorAlert" class="alert-danger">
+                    ⚠️ ACESSO NEGADO - CREDENCIAIS INVÁLIDAS
+                </div>
+
+                <form id="authForm">
+                    <div class="form-group">
+                        <label for="user">⌨️ USUÁRIO</label>
+                        <input type="text" id="user" placeholder="DIGITE O CÓDIGO DE ACESSO" required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass">🔒 SENHA</label>
+                        <input type="password" id="pass" placeholder="••••••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="btnSubmit">
+                        <span id="btnText">INICIAR AUTENTICAÇÃO</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-footer">
+        ⚡ SISTEMA PROTEGIDO - CRIPTOGRAFIA DE 256 BITS<br>
+        © 2026 SECRETARIA DE ESTADO DA FAZENDA - TODOS OS DIREITOS RESERVADOS
+    </div>
+
+    <script>
+        // ============================================
+        // PROTEÇÃO LEVE
+        // ============================================
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // ============================================
+        // EFEITO MATRIZ HACKER
+        // ============================================
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&!';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for(let i = 0; i < columns; i++) {
+            drops[i] = Math.floor(Math.random() * canvas.height);
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = `${fontSize}px 'Courier New'`;
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                
+                if (i % 3 === 0) {
+                    ctx.fillStyle = '#00ffff';
+                } else if (i % 3 === 1) {
+                    ctx.fillStyle = '#00ff9d';
+                } else {
+                    ctx.fillStyle = '#0099ff';
+                }
+                
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // ============================================
+        // SISTEMA DE LOGIN - CORRIGIDO!
+        // ============================================
+        
+        // CREDENCIAIS CORRETAS (SEM CRIPTOGRAFIA COMPLEXA)
+        const CREDENCIAIS = {
+            usuario: 'PROGRESSO2026',
+            senha: '2026PROGRESSO'
+        };
+
+        const authForm = document.getElementById('authForm');
+        const errorAlert = document.getElementById('errorAlert');
+        const btnSubmit = document.getElementById('btnSubmit');
+        const btnText = document.getElementById('btnText');
+
+        // Foco automático
+        document.getElementById('user').focus();
+
+        authForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const usuario = document.getElementById('user').value.trim();
+            const senha = document.getElementById('pass').value;
+
+            // Limpa estados anteriores
+            errorAlert.style.display = 'none';
+            btnSubmit.disabled = true;
+            btnText.innerHTML = '<div class="spinner"></div> VERIFICANDO CREDENCIAIS...';
+
+            // VALIDAÇÃO SIMPLES E DIRETA
+            const usuarioValido = usuario === CREDENCIAIS.usuario;
+            const senhaValida = senha === CREDENCIAIS.senha;
+
+            // Pequeno delay
+            await new Promise(resolve => setTimeout(resolve, 800));
+
+            if (usuarioValido && senhaValida) {
+                // Tenta login na API primeiro
+                try {
+                    const response = await fetch('http://localhost:3000/api/admin/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ usuario, senha })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        
+                        if (data.sucesso) {
+                            localStorage.setItem('detran_admin_token', data.token || 'authenticated');
+                            localStorage.setItem('detran_admin_user', usuario);
+                            
+                            btnText.innerHTML = '<div class="spinner"></div> ACESSO CONCEDIDO...';
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            
+                            window.location.href = 'painel.html';
+                            return;
+                        }
+                    }
+                } catch (err) {
+                    // Se API falhar, usa autenticação local
+                    console.log('API offline, usando autenticação local');
+                }
+
+                // AUTENTICAÇÃO LOCAL (fallback)
+                localStorage.setItem('detran_admin_token', 'local_auth_' + Date.now());
+                localStorage.setItem('detran_admin_user', usuario);
+                
+                btnText.innerHTML = '<div class="spinner"></div> REDIRECIONANDO...';
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
+                window.location.href = 'painel.html';
+                
+            } else {
+                // CREDENCIAIS INCORRETAS
+                errorAlert.style.display = 'block';
+                btnSubmit.disabled = false;
+                btnText.textContent = 'TENTAR NOVAMENTE';
+                
+                // Efeito de erro
+                document.getElementById('user').style.borderColor = '#ff3366';
+                document.getElementById('pass').style.borderColor = '#ff3366';
+                
+                setTimeout(() => {
+                    document.getElementById('user').style.borderColor = '#00a2ff';
+                    document.getElementById('pass').style.borderColor = '#00a2ff';
+                }, 1000);
+                
+                // Mostra erro no console para debug
+                console.log('Login falhou:', {
+                    digitado: { usuario, senha },
+                    esperado: CREDENCIAIS
+                });
+            }
+        });
+
+        // Enter funciona
+        document.getElementById('pass').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                authForm.dispatchEvent(new Event('submit'));
+            }
+        });
+
+        // Clique em qualquer lugar foca no input
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('input') && !e.target.matches('button')) {
+                if (!document.getElementById('user').value) {
+                    document.getElementById('user').focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

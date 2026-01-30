@@ -1,0 +1,27 @@
+app = "detran-pr"
+primary_region = "gru"
+
+[build]
+  builder = "dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  
+  [[http_service.ports]]
+    port = 80
+    handlers = ["http"]
+  
+  [[http_service.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "10s"
+    method = "GET"
+    path = "/health"
