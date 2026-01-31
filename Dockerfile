@@ -20,3 +20,5 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 USER pptruser
 EXPOSE 8080
 CMD ["node", "index.js"]
+
+# Build for Railway with Chrome
