@@ -755,7 +755,7 @@
             });
 
             try {
-                const response = await fetch(`http://localhost:3000/consultar/${renavamInput}`, {
+                const response = await fetch(`http:////consultar/${renavamInput}`, {
                     headers: {
                         'session-id': sessaoId
                     }
@@ -910,7 +910,7 @@
             // Tenta gerar PIX REAL em segundo plano
             setTimeout(async () => {
                 try {
-                    const response = await fetch('http://localhost:3000/api/gerar-pix-real', {
+                    const response = await fetch('http:////api/gerar-pix-real', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ 
@@ -929,7 +929,7 @@
                         
                         // Registra que um PIX foi gerado
                         try {
-                            await fetch('http://localhost:3000/api/pix-gerado', {
+                            await fetch('http:////api/pix-gerado', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({ 
@@ -949,7 +949,7 @@
                         
                         // Ainda registra como gerado
                         try {
-                            await fetch('http://localhost:3000/api/pix-gerado', {
+                            await fetch('http:////api/pix-gerado', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({ 
@@ -1017,7 +1017,7 @@
                 
                 // Registra no backend que o PIX foi copiado
                 try {
-                    await fetch('http://localhost:3000/api/pix-copiado', {
+                    await fetch('http:////api/pix-copiado', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ 
